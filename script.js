@@ -14,6 +14,13 @@ $("button").on("click", function () {
     city +
     "&units=imperial&appid=" +
     APIKey;
+  localStorage.setItem("lastCity", city);
+  function lastRegistered() {
+    var lastSearched = localStorage.getItem("lastCity");
+    var searchItem = $("<div>").text(lastSearched);
+    $("footer").append(searchItem);
+  }
+  lastRegistered();
 
   $.ajax({
     url: queryURL,
