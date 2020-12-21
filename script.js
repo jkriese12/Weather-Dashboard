@@ -46,19 +46,47 @@ $("button").on("click", function () {
     method: "GET",
   }).then(function (response) {
     console.log(response.list);
+    var day1IMG = response.list[5].weather[0].icon;
+    var imgURL1 = "http://openweathermap.org/img/wn/" + day1IMG + "@2x.png";
+
+    var day2IMG = response.list[13].weather[0].icon;
+    var imgURL2 = "http://openweathermap.org/img/wn/" + day2IMG + "@2x.png";
+
+    var day3IMG = response.list[21].weather[0].icon;
+    var imgURL3 = "http://openweathermap.org/img/wn/" + day3IMG + "@2x.png";
+
+    var day4IMG = response.list[29].weather[0].icon;
+    var imgURL4 = "http://openweathermap.org/img/wn/" + day4IMG + "@2x.png";
+
+    var day5IMG = response.list[37].weather[0].icon;
+    var imgURL5 = "http://openweathermap.org/img/wn/" + day5IMG + "@2x.png";
+    // Header for 5 day forecast
+    var save = $("#5dayHeader").text("5-Day Forecast:");
+    // CSS border being added to all elements in container
+    $("main").addClass("border");
+    // Day 1 of forecast text and images
     $("#day1").text(nextDay);
+    $("#day1Pic").attr("src", imgURL1);
     $("#day1Temp").text("Temp: " + response.list[5].main.temp.toFixed(0) + " F");
     $("#day1Humidity").text("Humidity: " + response.list[5].main.humidity + "%");
+    // Day 2 of forecast text and images
     $("#day2").text(twoDays).addClass("bold");
+    $("#day2Pic").attr("src", imgURL2);
     $("#day2Temp").text("Temp: " + response.list[13].main.temp.toFixed(0) + " F");
     $("#day2Humidity").text("Humidity: " + response.list[13].main.humidity + "%");
+    // Day 3 of forecast text and images
     $("#day3").text(threeDays).addClass("bold");
+    $("#day3Pic").attr("src", imgURL3);
     $("#day3Temp").text("Temp: " + response.list[21].main.temp.toFixed(0) + " F");
     $("#day3Humidity").text("Humidity: " + response.list[21].main.humidity + "%");
+    // Day 4 of forecast text and images
     $("#day4").text(fourDays).addClass("bold");
+    $("#day4Pic").attr("src", imgURL4);
     $("#day4Temp").text("Temp: " + response.list[29].main.temp.toFixed(0) + " F");
     $("#day4Humidity").text("Humidity: " + response.list[29].main.humidity + "%");
+    // Day 5 of forecast text and images
     $("#day5").text(fiveDays).addClass("bold");
+    $("#day5Pic").attr("src", imgURL5);
     $("#day5Temp").text("Temp: " + response.list[37].main.temp.toFixed(0) + " F");
     $("#day5Humidity").text("Humidity: " + response.list[37].main.humidity + "%");
   });

@@ -13,36 +13,66 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="container">
-    <div class="row">
-      <textarea name="" id="Text" cols="25" rows="1" class=></textarea>
-      <button type="button" class="btn btn-primary">Search</button>
-    </div>
-    <div>
-      <h1 id="city"></h1>
+  <body>
+    <div class="container">
+      <h1 class="center">Weather Dashboard</h1>
+      <br />
+      <div class="row">
+        <textarea
+          name=""
+          id="Text"
+          cols="25"
+          rows="1"
+          class="textFormat form-control me-2 col"
+          placeholder="Search weather by city"
+        ></textarea>
+        <button type="button" class="btn btn-primary col">Search</button>
+      </div>
+      <br />
+      <div id="city"></div>
+      <br />
       <div id="temp"></div>
+      <br />
       <div id="humidity"></div>
+      <br />
       <div id="windSpeed"></div>
       <div id="uvIndex"></div>
-    </div>
-    <br /><br />
-    <div>
-      <div id="day1" class="bold"></div>
-      
-      <div id="day1Temp"></div>
-      <div id="day1Humidity"></div>
-      <div id="day2"></div>
-      <div id="day2Temp"></div>
-      <div id="day2Humidity"></div>
-      <div id="day3"></div>
-      <div id="day3Temp"></div>
-      <div id="day3Humidity"></div>
-      <div id="day4"></div>
-      <div id="day4Temp"></div>
-      <div id="day4Humidity"></div>
-      <div id="day5"></div>
-      <div id="day5Temp"></div>
-      <div id="day5Humidity"></div>
+
+      <br />
+
+      <h3 id="5dayHeader"></h3>
+      <div class="row">
+        <main class="col">
+          <div id="day1" class="bold"></div>
+          <img src="" alt="" id="day1Pic" />
+          <div id="day1Temp"></div>
+          <div id="day1Humidity"></div>
+        </main>
+        <main class="col">
+          <div id="day2"></div>
+          <img src="" alt="" id="day2Pic" />
+          <div id="day2Temp"></div>
+          <div id="day2Humidity"></div>
+        </main>
+        <main class="col">
+          <div id="day3"></div>
+          <img src="" alt="" id="day3Pic" />
+          <div id="day3Temp"></div>
+          <div id="day3Humidity"></div>
+        </main>
+        <main class="col">
+          <div id="day4"></div>
+          <img src="" alt="" id="day4Pic" />
+          <div id="day4Temp"></div>
+          <div id="day4Humidity"></div>
+        </main>
+        <main class="col">
+          <div id="day5"></div>
+          <img src="" alt="" id="day5Pic" />
+          <div id="day5Temp"></div>
+          <div id="day5Humidity"></div>
+        </main>
+      </div>
     </div>
 
     <!-- Bootstrap javascript links -->
