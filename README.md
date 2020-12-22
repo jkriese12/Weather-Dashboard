@@ -9,4 +9,4 @@ UI loadout when user types in a city
 ![image](https://user-images.githubusercontent.com/73569538/102849682-e17b1600-43d4-11eb-8544-fd28bca190a0.png)
 
 Github Repository: https://github.com/jkriese12/Weather-Dashboard
-Github Pages:
+Github Pages: https://jkriese12.github.io/Weather-Dashboard/
