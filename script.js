@@ -3,6 +3,12 @@ var city = $("textarea").val();
 var APIKey = "11c1419085b8b8abf0e987d8580426ea";
 var queryURL =
   "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+function lastRegistered() {
+  var lastSearched = localStorage.getItem("lastCity");
+  var searchItem = $("<div>").text(lastSearched);
+  $("footer").append(searchItem);
+}
+lastRegistered();
 
 // Calling the API for current day weather on-click
 $("button").on("click", function () {
